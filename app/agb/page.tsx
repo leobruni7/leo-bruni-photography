@@ -47,7 +47,7 @@ export default function AGBPage() {
           {
             nr: "§ 8",
             titel: "Datenschutz",
-            text: `Die Verarbeitung personenbezogener Daten erfolgt gemäß der Datenschutzerklärung unter leobruni-photo.com/impressum sowie der DSGVO.`,
+            text: `Die Verarbeitung personenbezogener Daten erfolgt gemäß der Datenschutzerklärung unter leo-bruni-photography.vercel.app/impressum sowie der DSGVO.`,
           },
           {
             nr: "§ 9",
