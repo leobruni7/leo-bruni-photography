@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface GalleryPageProps {
+interface Props {
   title: string;
   subtitle: string;
   heroImg: string;
@@ -9,51 +9,38 @@ interface GalleryPageProps {
   description: string;
 }
 
-export default function GalleryPage({ title, subtitle, heroImg, images, description }: GalleryPageProps) {
+export default function GalleryPage({ title, subtitle, heroImg, images, description }: Props) {
   return (
     <div className="bg-white min-h-screen">
-      {/* Hero — dunkel, transparent Navbar passt */}
-      <section className="relative h-[55vh] sm:h-[65vh] min-h-[380px] flex items-end overflow-hidden bg-black">
-        <Image
-          src={heroImg}
-          alt={title}
-          fill
-          className="object-cover opacity-50 grayscale"
-          unoptimized
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-        <div className="relative z-10 px-5 sm:px-8 lg:px-12 pb-10 sm:pb-14 max-w-7xl w-full mx-auto">
-          <p className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-gray-400 mb-2">{subtitle}</p>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-tight">{title}</h1>
+
+      {/* Hero */}
+      <section className="relative h-screen min-h-[580px] bg-black flex items-end overflow-hidden">
+        <Image src={heroImg} alt={title} fill priority unoptimized
+          className="object-cover opacity-50 grayscale" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="relative z-10 max-w-[1200px] w-full mx-auto px-5 sm:px-8 pb-16 sm:pb-24">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-white/40 mb-4">{subtitle}</p>
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extralight text-white tracking-tight leading-none">
+            {title}
+          </h1>
         </div>
       </section>
 
       {/* Beschreibung */}
-      <section className="bg-white py-10 sm:py-14 px-5 sm:px-8 lg:px-12 border-b border-gray-100">
-        <div className="max-w-xl mx-auto text-center">
-          <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+      <section className="bg-white py-20 sm:py-28 px-5 sm:px-8">
+        <div className="max-w-[600px] mx-auto text-center">
+          <p className="text-base sm:text-xl text-[#6e6e73] font-light leading-relaxed">{description}</p>
         </div>
       </section>
 
-      {/* Galerie */}
-      <section className="bg-white py-2 px-1 sm:px-2">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0.5 sm:gap-1">
+      {/* Grid */}
+      <section className="bg-[#f5f5f7] py-2 px-1 sm:px-2">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-2">
           {images.map((img, i) => (
-            <div
-              key={i}
-              className={`relative overflow-hidden bg-gray-100 group ${
-                i === 0 || i === 3 ? "sm:col-span-2" : ""
-              }`}
-            >
+            <div key={i} className={`relative overflow-hidden bg-[#e8e8ed] group ${i === 0 || i === 3 ? "sm:col-span-2" : ""}`}>
               <div className="aspect-[4/3]">
-                <Image
-                  src={img}
-                  alt={`${title} ${i + 1}`}
-                  fill
-                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                  unoptimized
-                />
+                <Image src={img} alt={`${title} ${i + 1}`} fill unoptimized
+                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.04] transition-all duration-700" />
               </div>
             </div>
           ))}
@@ -61,17 +48,15 @@ export default function GalleryPage({ title, subtitle, heroImg, images, descript
       </section>
 
       {/* CTA */}
-      <section className="bg-gray-50 py-16 sm:py-20 px-5 sm:px-8 border-t border-gray-100 mt-2">
-        <div className="max-w-xl mx-auto text-center">
-          <p className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-gray-400 mb-3">Interesse geweckt?</p>
-          <h2 className="text-2xl sm:text-3xl font-light text-black mb-5 tracking-tight">
-            {title} buchen
+      <section className="bg-white py-24 sm:py-36 px-5 sm:px-8">
+        <div className="max-w-[580px] mx-auto text-center">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-[#6e6e73] mb-5">Buchen</p>
+          <h2 className="text-4xl sm:text-5xl font-extralight text-[#1d1d1f] mb-10 tracking-tight">
+            {title} anfragen
           </h2>
-          <Link
-            href="/buchen"
-            className="inline-block bg-black text-white text-[10px] sm:text-xs tracking-[0.3em] uppercase px-10 sm:px-12 py-4 hover:bg-gray-800 transition-colors"
-          >
-            Termin anfragen
+          <Link href="/buchen"
+            className="inline-block text-[12px] tracking-[0.3em] uppercase bg-[#1d1d1f] text-white px-12 py-4 rounded-full hover:bg-black transition-colors">
+            Termin buchen
           </Link>
         </div>
       </section>
