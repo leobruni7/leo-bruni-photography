@@ -1,4 +1,4 @@
-import { SOCIAL, PRIMARY_SOCIAL, type SocialPlatform } from "@/lib/social";
+import { SOCIAL, PRIMARY_SOCIAL, ALL_SOCIAL, type SocialPlatform } from "@/lib/social";
 
 // ── Brand SVG Icons ───────────────────────────────────────────────────────
 function IconInstagram({ className }: { className?: string }) {
