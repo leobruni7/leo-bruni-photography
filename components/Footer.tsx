@@ -26,7 +26,7 @@ export default function Footer() {
             <div>
               <p className="text-white/30 text-[10px] tracking-widest uppercase mb-3">Studio</p>
               <div className="flex flex-col gap-2.5">
-                {["/ueber-mich|Über mich", "/buchen|Buchen", "/kontakt|Kontakt", "/faq|FAQ"].map(s => {
+                {["/ueber-mich|Über mich", "/anfrage|Anfragen", "/buchen|Buchen", "/kontakt|Kontakt", "/faq|FAQ"].map(s => {
                   const [href, label] = s.split("|");
                   return <Link key={href} href={href} className="text-white/70 hover:text-white transition-colors">{label}</Link>;
                 })}

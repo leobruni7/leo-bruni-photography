@@ -1,11 +1,42 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const categories = [
-  { href: "/portfolio/food", label: "Food", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=85" },
-  { href: "/portfolio/hochzeit", label: "Hochzeit", img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=85" },
-  { href: "/portfolio/architektur", label: "Architektur", img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=85" },
-  { href: "/portfolio/video", label: "Video", img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=900&q=85" },
+const services = [
+  {
+    href: "/portfolio/food",
+    label: "Food",
+    sub: "Kulinarik & Fine Dining",
+    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=85",
+    cta: "Food Fotografie buchen",
+  },
+  {
+    href: "/portfolio/hochzeit",
+    label: "Hochzeit",
+    sub: "Emotionen & Erinnerungen",
+    img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=85",
+    cta: "Hochzeit anfragen",
+  },
+  {
+    href: "/portfolio/architektur",
+    label: "Architektur",
+    sub: "Raum & Struktur",
+    img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=85",
+    cta: "Architektur buchen",
+  },
+  {
+    href: "/portfolio/video",
+    label: "Video",
+    sub: "Bewegtbild & Film",
+    img: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=900&q=85",
+    cta: "Videoprojekt starten",
+  },
+];
+
+const stats = [
+  { n: "12+", label: "Jahre Erfahrung" },
+  { n: "800+", label: "Projekte" },
+  { n: "24h", label: "Antwortzeit" },
+  { n: "100%", label: "Leidenschaft" },
 ];
 
 const grid = [
@@ -21,134 +52,188 @@ export default function Home() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative w-full h-screen min-h-[600px] bg-black flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-screen min-h-[640px] bg-black flex items-end overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=2000&q=90"
           alt="Leo Bruni Photography"
           fill priority unoptimized
-          className="object-cover opacity-55 grayscale scale-105"
+          className="object-cover opacity-50 grayscale scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
-        <div className="relative z-10 text-center px-5 max-w-5xl mx-auto">
-          <p className="text-[11px] sm:text-xs tracking-[0.5em] uppercase text-white/60 mb-6 sm:mb-8">Fine Art Photography · Hamburg</p>
-          <h1 className="text-[13vw] sm:text-[10vw] lg:text-[9rem] font-extralight text-white leading-[0.9] tracking-tight mb-6 sm:mb-8">
-            Leo<br />Bruni
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/10" />
+
+        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 sm:px-10 pb-16 sm:pb-24">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-white/50 mb-5">
+            Fine Art Photography · Hamburg
+          </p>
+          <h1 className="text-[clamp(3rem,8vw,7rem)] font-extralight text-white leading-[1] tracking-[-0.04em] mb-6 max-w-3xl">
+            Bilder,<br />die bleiben.
           </h1>
-          <p className="text-[11px] sm:text-sm tracking-[0.3em] uppercase text-white/50 mb-10 sm:mb-14">
-            Food&nbsp;&nbsp;·&nbsp;&nbsp;Hochzeit&nbsp;&nbsp;·&nbsp;&nbsp;Architektur&nbsp;&nbsp;·&nbsp;&nbsp;Video
+          <p className="text-sm sm:text-base text-white/60 font-light mb-10 max-w-sm leading-relaxed">
+            Professionelle Fotografie für Food, Hochzeit, Architektur & Video in Hamburg.
           </p>
-          <Link href="/portfolio"
-            className="inline-flex items-center gap-3 text-[11px] tracking-[0.3em] uppercase text-white border border-white/40 rounded-full px-8 py-3 hover:bg-white hover:text-black transition-all duration-300">
-            Portfolio entdecken
-          </Link>
-        </div>
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-40">
-          <span className="text-[9px] tracking-[0.3em] uppercase text-white">Scroll</span>
-          <div className="w-px h-10 bg-white" />
-        </div>
-      </section>
-
-      {/* ── INTRO STATEMENT ── */}
-      <section className="bg-white py-24 sm:py-36 lg:py-44 px-5 sm:px-8">
-        <div className="max-w-[800px] mx-auto text-center">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extralight text-[#1d1d1f] leading-tight tracking-tight">
-            Bilder, die bleiben.
-          </h2>
-          <p className="mt-6 sm:mt-8 text-base sm:text-lg text-[#6e6e73] font-light leading-relaxed max-w-[540px] mx-auto">
-            Ich fotografiere das Unsichtbare — den Moment kurz bevor alles perfekt ist. Mit Licht, Stille und handwerklicher Präzision.
-          </p>
-          <Link href="/ueber-mich"
-            className="inline-block mt-10 sm:mt-12 text-[12px] tracking-[0.3em] uppercase text-[#1d1d1f] border-b border-[#1d1d1f] pb-0.5 hover:text-[#6e6e73] hover:border-[#6e6e73] transition-colors">
-            Über mich
-          </Link>
-        </div>
-      </section>
-
-      {/* ── KATEGORIEN — Fullwidth Stack ── */}
-      <section className="bg-[#f5f5f7]">
-        {categories.map((cat, i) => (
-          <Link key={cat.href} href={cat.href}
-            className={`group relative flex items-center overflow-hidden ${i % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
-            style={{ minHeight: "min(60vh, 520px)" }}>
-
-            {/* Bild */}
-            <div className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-full md:absolute md:inset-0">
-              <Image src={cat.img} alt={cat.label} fill unoptimized
-                className={`object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-[1.03] ${
-                  i % 2 === 0 ? "md:left-0 md:w-1/2" : "md:right-0 md:w-1/2"
-                }`}
-              />
-            </div>
-
-            {/* Text */}
-            <div className={`relative z-10 w-full md:w-1/2 flex flex-col justify-center px-8 sm:px-14 lg:px-20 py-14 sm:py-20 ${
-              i % 2 === 0 ? "md:ml-auto" : ""
-            }`}>
-              <p className="text-[10px] tracking-[0.5em] uppercase text-[#6e6e73] mb-4">0{i + 1}</p>
-              <h3 className="text-4xl sm:text-5xl lg:text-6xl font-extralight text-[#1d1d1f] leading-tight tracking-tight mb-4">
-                {cat.label}
-              </h3>
-              <span className="inline-flex items-center gap-2 text-[11px] tracking-[0.3em] uppercase text-[#1d1d1f] mt-4 group-hover:gap-4 transition-all">
-                Ansehen <span>→</span>
-              </span>
-            </div>
-          </Link>
-        ))}
-      </section>
-
-      {/* ── ZITAT ── */}
-      <section className="bg-[#1d1d1f] py-24 sm:py-36 lg:py-44 px-5 sm:px-8">
-        <div className="max-w-[700px] mx-auto text-center">
-          <p className="text-[10px] tracking-[0.5em] uppercase text-white/30 mb-10">Philosophie</p>
-          <blockquote className="text-2xl sm:text-4xl lg:text-5xl font-extralight text-white leading-snug tracking-tight">
-            „Licht ist meine Sprache.<br />Stille ist mein Studio."
-          </blockquote>
-          <cite className="block mt-10 text-[11px] tracking-[0.4em] uppercase text-white/30 not-italic">
-            Leo Bruni
-          </cite>
-        </div>
-      </section>
-
-      {/* ── PORTFOLIO GRID ── */}
-      <section className="bg-white py-24 sm:py-36 px-5 sm:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-14 sm:mb-20">
-            <p className="text-[10px] tracking-[0.5em] uppercase text-[#6e6e73] mb-4">Ausgewählte Arbeiten</p>
-            <h2 className="text-4xl sm:text-6xl font-extralight text-[#1d1d1f] tracking-tight">Portfolio</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-1 sm:gap-2">
-            {grid.map((img, i) => (
-              <div key={i} className="relative overflow-hidden aspect-square group bg-[#f5f5f7]">
-                <Image src={img} alt="" fill unoptimized
-                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.05] transition-all duration-700"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-14 sm:mt-20">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <Link href="/buchen"
+              className="inline-flex items-center justify-center text-[11px] tracking-[0.25em] uppercase bg-white text-[#1d1d1f] px-8 py-4 rounded-full hover:bg-[#FAF7F2] transition-all font-medium">
+              Jetzt Termin buchen
+            </Link>
             <Link href="/portfolio"
-              className="inline-block text-[12px] tracking-[0.3em] uppercase bg-[#1d1d1f] text-white px-12 py-4 rounded-full hover:bg-black transition-colors">
-              Alle Arbeiten
+              className="inline-flex items-center justify-center text-[11px] tracking-[0.25em] uppercase text-white border border-white/30 px-8 py-4 rounded-full hover:bg-white/10 transition-all">
+              Portfolio ansehen
+            </Link>
+          </div>
+        </div>
+
+        <div className="absolute bottom-8 right-8 sm:right-10 z-10 flex flex-col items-center gap-2 opacity-30">
+          <div className="w-px h-12 bg-white" />
+          <span className="text-[9px] tracking-[0.3em] uppercase text-white rotate-0">Scroll</span>
+        </div>
+      </section>
+
+      {/* ── STATS ── */}
+      <section className="bg-[#1d1d1f]">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 py-10 sm:py-12 grid grid-cols-2 sm:grid-cols-4 gap-0 divide-x divide-white/10">
+          {stats.map((s) => (
+            <div key={s.n} className="text-center px-4 sm:px-6 py-2">
+              <p className="text-2xl sm:text-3xl font-extralight text-white tracking-[-0.04em]">{s.n}</p>
+              <p className="text-[10px] tracking-[0.3em] uppercase text-white/40 mt-1">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── STATEMENT ── */}
+      <section className="bg-white py-24 sm:py-36 lg:py-44 px-6 sm:px-10">
+        <div className="max-w-[860px] mx-auto text-center">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-6">Meine Philosophie</p>
+          <h2 className="text-[clamp(2rem,5vw,4rem)] font-extralight text-[#1d1d1f] leading-[1.1] tracking-[-0.04em] mb-6 sm:mb-8">
+            Ich fotografiere das Unsichtbare — den Moment kurz bevor alles perfekt ist.
+          </h2>
+          <p className="text-base sm:text-lg text-[#6e6e73] font-light leading-relaxed max-w-[480px] mx-auto">
+            Mit Licht, Stille und handwerklicher Präzision entstehen Bilder, die Ihre Marke, Ihr Unternehmen oder Ihren wichtigsten Tag unvergesslich machen.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 sm:mt-12">
+            <Link href="/ueber-mich"
+              className="inline-flex items-center justify-center text-[11px] tracking-[0.25em] uppercase text-[#1d1d1f] border border-[#1d1d1f] px-8 py-3.5 rounded-full hover:bg-[#1d1d1f] hover:text-white transition-all">
+              Über Leo Bruni
+            </Link>
+            <Link href="/buchen"
+              className="inline-flex items-center justify-center text-[11px] tracking-[0.25em] uppercase bg-[#C9A96E] text-white px-8 py-3.5 rounded-full hover:bg-[#8B7355] transition-all">
+              Kostenloses Erstgespräch
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── CTA BUCHEN ── */}
-      <section className="bg-[#f5f5f7] py-24 sm:py-36 lg:py-44 px-5 sm:px-8">
-        <div className="max-w-[680px] mx-auto text-center">
-          <p className="text-[10px] tracking-[0.5em] uppercase text-[#6e6e73] mb-5 sm:mb-6">Zusammenarbeiten</p>
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-extralight text-[#1d1d1f] leading-tight tracking-tight mb-6 sm:mb-8">
-            Ihr Projekt<br />beginnt hier.
+      {/* ── SERVICES / LEAD GEN ── */}
+      <section className="bg-[#f5f5f7] py-20 sm:py-28 px-6 sm:px-10">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-4">Leistungen</p>
+            <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] font-extralight text-[#1d1d1f] tracking-[-0.04em]">
+              Was brauchen Sie?
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {services.map((s) => (
+              <div key={s.href} className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500">
+                <div className="relative aspect-[3/2] overflow-hidden">
+                  <Image src={s.img} alt={s.label} fill unoptimized
+                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.05] transition-all duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-5">
+                    <h3 className="text-xl font-extralight text-white tracking-[-0.03em] leading-tight">{s.label}</h3>
+                    <p className="text-[11px] text-white/60 mt-0.5">{s.sub}</p>
+                  </div>
+                </div>
+                <div className="p-5">
+                  <Link href="/buchen"
+                    className="block w-full text-center text-[10px] tracking-[0.25em] uppercase bg-[#1d1d1f] text-white py-3 rounded-full hover:bg-black transition-colors">
+                    {s.cta}
+                  </Link>
+                  <Link href={s.href}
+                    className="block w-full text-center text-[10px] tracking-[0.2em] uppercase text-[#6e6e73] py-3 hover:text-[#1d1d1f] transition-colors mt-1">
+                    Portfolio ansehen →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PORTFOLIO GRID ── */}
+      <section className="bg-white py-20 sm:py-32 px-6 sm:px-10">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-14 gap-4">
+            <div>
+              <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-3">Ausgewählte Arbeiten</p>
+              <h2 className="text-[clamp(2rem,4vw,3rem)] font-extralight text-[#1d1d1f] tracking-[-0.04em]">
+                Portfolio
+              </h2>
+            </div>
+            <Link href="/portfolio"
+              className="self-start sm:self-auto text-[11px] tracking-[0.25em] uppercase text-[#1d1d1f] border border-[#1d1d1f] px-7 py-3 rounded-full hover:bg-[#1d1d1f] hover:text-white transition-all">
+              Alle Arbeiten
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-1.5">
+            {grid.map((img, i) => (
+              <div key={i} className="relative overflow-hidden aspect-square group bg-[#f5f5f7] rounded-xl">
+                <Image src={img} alt="" fill unoptimized
+                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.06] transition-all duration-700 rounded-xl"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── QUOTE ── */}
+      <section className="bg-[#1d1d1f] py-24 sm:py-36 px-6 sm:px-10">
+        <div className="max-w-[760px] mx-auto text-center">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-8">Meine Bildsprache</p>
+          <blockquote className="text-[clamp(1.6rem,4vw,3.2rem)] font-extralight text-white leading-[1.2] tracking-[-0.03em]">
+            „Licht ist meine Sprache.<br />Stille ist mein Studio."
+          </blockquote>
+          <cite className="block mt-8 text-[11px] tracking-[0.4em] uppercase text-white/30 not-italic">
+            Leo Bruni
+          </cite>
+          <div className="mt-10 sm:mt-12">
+            <Link href="/buchen"
+              className="inline-flex items-center gap-3 text-[11px] tracking-[0.25em] uppercase text-white border border-white/20 px-8 py-4 rounded-full hover:bg-white/10 transition-all">
+              Jetzt anfragen
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── LEAD GEN CTA ── */}
+      <section className="bg-[#FAF7F2] py-24 sm:py-36 lg:py-44 px-6 sm:px-10">
+        <div className="max-w-[760px] mx-auto text-center">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-5">Bereit für Ihr Projekt?</p>
+          <h2 className="text-[clamp(2.2rem,5vw,4rem)] font-extralight text-[#1d1d1f] leading-[1.1] tracking-[-0.04em] mb-6">
+            Ihr nächstes Projekt<br />beginnt mit einem Gespräch.
           </h2>
-          <p className="text-base sm:text-lg text-[#6e6e73] font-light mb-10 sm:mb-14 max-w-sm mx-auto leading-relaxed">
-            Ob Hochzeit, Food oder Architektur — buchen Sie direkt online Ihren Termin.
+          <p className="text-base text-[#6e6e73] font-light mb-10 max-w-[420px] mx-auto leading-relaxed">
+            Kostenloses Erstgespräch · Kein Risiko · Antwort innerhalb von 24h
           </p>
-          <Link href="/buchen"
-            className="inline-block text-[12px] tracking-[0.3em] uppercase bg-[#1d1d1f] text-white px-14 py-4 rounded-full hover:bg-black transition-colors">
-            Termin buchen
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Link href="/buchen"
+              className="inline-flex items-center justify-center text-[11px] tracking-[0.25em] uppercase bg-[#1d1d1f] text-white px-12 py-4 rounded-full hover:bg-black transition-colors font-medium">
+              Termin buchen
+            </Link>
+            <Link href="/kontakt"
+              className="inline-flex items-center justify-center text-[11px] tracking-[0.25em] uppercase text-[#1d1d1f] border border-[#D4C5A9] px-12 py-4 rounded-full hover:border-[#C9A96E] transition-colors">
+              Erst Fragen stellen
+            </Link>
+          </div>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
+            {["Food Fotografie", "Hochzeit", "Architektur", "Video"].map((tag) => (
+              <span key={tag} className="text-[11px] tracking-[0.2em] uppercase text-[#8B7355]">
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
     </>
