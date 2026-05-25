@@ -59,7 +59,7 @@ export default function AnfragePage() {
             alt="" fill unoptimized className="object-cover grayscale"
           />
         </div>
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 sm:px-10 pt-16 sm:pt-20 pb-16 sm:pb-20">
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 sm:px-10 pt-28 sm:pt-36 pb-16 sm:pb-20">
           <div className="max-w-2xl">
             <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-5">Jetzt anfragen</p>
             <h1 className="text-[clamp(2.4rem,6vw,5rem)] font-extralight text-white leading-[1.05] tracking-[-0.04em] mb-6">
