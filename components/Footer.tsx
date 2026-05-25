@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-16 px-6 lg:px-12">
+    <footer className="bg-black text-white py-14 sm:py-16 px-5 sm:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 mb-10 sm:mb-12">
           <div>
-            <p className="text-xs tracking-widest uppercase text-gray-400 mb-4">Studio</p>
+            <p className="text-[10px] tracking-widest uppercase text-gray-400 mb-3 sm:mb-4">Studio</p>
             <p className="text-sm text-gray-300 leading-relaxed">
               Leo Bruni Photography<br />
               Fine Art & Commercial Photography<br />
@@ -14,8 +14,8 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <p className="text-xs tracking-widest uppercase text-gray-400 mb-4">Navigation</p>
-            <div className="flex flex-col gap-2">
+            <p className="text-[10px] tracking-widest uppercase text-gray-400 mb-3 sm:mb-4">Navigation</p>
+            <div className="grid grid-cols-2 sm:grid-cols-1 gap-2">
               {[
                 { href: "/portfolio/food", label: "Food" },
                 { href: "/portfolio/hochzeit", label: "Hochzeit" },
@@ -30,34 +30,30 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <p className="text-xs tracking-widest uppercase text-gray-400 mb-4">Kontakt</p>
+            <p className="text-[10px] tracking-widest uppercase text-gray-400 mb-3 sm:mb-4">Kontakt</p>
             <div className="flex flex-col gap-2 text-sm text-gray-300">
-              <a href="mailto:hello@leobruni.photo" className="hover:text-white transition-colors">
-                hello@leobruni.photo
+              <a href="mailto:hello@leobruni-photo.com" className="hover:text-white transition-colors break-all">
+                hello@leobruni-photo.com
               </a>
               <a href="tel:+43123456789" className="hover:text-white transition-colors">
                 +43 123 456 789
               </a>
-              <div className="flex gap-4 mt-2">
-                <a href="#" className="text-xs tracking-widest uppercase hover:text-white transition-colors">
-                  Instagram
-                </a>
-                <a href="#" className="text-xs tracking-widest uppercase hover:text-white transition-colors">
-                  LinkedIn
-                </a>
+              <div className="flex gap-5 mt-3">
+                <a href="#" className="text-[10px] tracking-widest uppercase hover:text-white transition-colors">Instagram</a>
+                <a href="#" className="text-[10px] tracking-widest uppercase hover:text-white transition-colors">LinkedIn</a>
               </div>
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-gray-500">
+        <div className="border-t border-gray-800 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+          <p className="text-[11px] text-gray-500 text-center sm:text-left">
             © {new Date().getFullYear()} Leo Bruni Photography. Alle Rechte vorbehalten.
           </p>
-          <div className="flex gap-6">
-            <Link href="/impressum" className="text-xs text-gray-500 hover:text-white transition-colors tracking-widest uppercase">
+          <div className="flex gap-5 sm:gap-6">
+            <Link href="/impressum" className="text-[10px] text-gray-500 hover:text-white transition-colors tracking-widest uppercase">
               Impressum
             </Link>
-            <Link href="/impressum#datenschutz" className="text-xs text-gray-500 hover:text-white transition-colors tracking-widest uppercase">
+            <Link href="/impressum#datenschutz" className="text-[10px] text-gray-500 hover:text-white transition-colors tracking-widest uppercase">
               Datenschutz
             </Link>
           </div>
