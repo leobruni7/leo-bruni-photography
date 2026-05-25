@@ -27,8 +27,8 @@ export default function KontaktPage() {
               <p className="text-xs tracking-[0.4em] uppercase text-gray-400 mb-4">Studio</p>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Leo Bruni Photography<br />
-                Mariahilfer Straße 100<br />
-                1060 Wien, Österreich
+                Rüsternkamp 17<br />
+                22607 Hamburg, Deutschland
               </p>
             </div>
             <div>
