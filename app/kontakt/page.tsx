@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { SocialCardsLight } from "@/components/SocialLinks";
 
@@ -10,16 +11,32 @@ export default function KontaktPage() {
   return (
     <div className="bg-white min-h-screen">
 
-      {/* Header */}
-      <section className="pt-28 sm:pt-36 pb-16 sm:pb-20 px-5 sm:px-8 text-center">
-        <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-4">Schreiben Sie mir</p>
-        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extralight text-[#1d1d1f] tracking-[-0.04em] leading-none">
-          Kontakt
-        </h1>
+      {/* Hero — weiches, einladendes Bild */}
+      <section className="relative h-[60vh] sm:h-[70vh] min-h-[480px] bg-black flex items-end overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=2000&q=85"
+          alt="Kontakt Leo Bruni Photography"
+          fill priority unoptimized
+          className="object-cover opacity-60 grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 sm:px-8 pb-14 sm:pb-20 text-center">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-white/40 mb-4">Schreiben Sie mir</p>
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extralight text-white tracking-[-0.04em] leading-none">
+            Kontakt
+          </h1>
+        </div>
+      </section>
+
+      {/* Intro zentriert */}
+      <section className="bg-white py-14 sm:py-20 px-5 sm:px-8 text-center border-b border-[#e5e5ea]">
+        <p className="text-base sm:text-lg text-[#6e6e73] font-light max-w-md mx-auto leading-relaxed">
+          Ich freue mich auf Ihre Nachricht — ob Projektanfrage, Frage oder einfach Hallo.
+        </p>
       </section>
 
       {/* Main grid */}
-      <section className="pb-24 sm:pb-36 px-5 sm:px-8">
+      <section className="py-16 sm:py-24 px-5 sm:px-8">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
 
           {/* Left — Studio info + Social */}
@@ -70,7 +87,6 @@ export default function KontaktPage() {
 
               <div className="w-full h-px bg-[#e5e5ea]" />
 
-              {/* Social Media */}
               <div>
                 <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-4">Social Media</p>
                 <SocialCardsLight only="all" />
