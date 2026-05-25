@@ -23,11 +23,10 @@ export default function Footer() {
                 +49 (0) 152 0985 0658
               </a>
             </p>
-            {/* Social Icons */}
-            <p className="text-[10px] tracking-[0.4em] uppercase text-white/20 mb-3">
-              <Link href="/social" className="hover:text-white/50 transition-colors">Social Media</Link>
-            </p>
-            <SocialIconsFooter />
+            <Link href="/social"
+              className="text-[10px] tracking-[0.3em] uppercase text-white/20 hover:text-[#C9A96E] transition-colors">
+              Social Media →
+            </Link>
           </div>
 
           {/* Portfolio */}
@@ -87,9 +86,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-6 sm:pt-8 text-[11px] text-white/25">
-          <p>© {new Date().getFullYear()} Leo Bruni Photography. Alle Rechte vorbehalten.</p>
-          <div className="flex flex-wrap gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-5 pt-6 sm:pt-8">
+          <p className="text-[11px] text-white/25 order-last sm:order-first">
+            © {new Date().getFullYear()} Leo Bruni Photography. Alle Rechte vorbehalten.
+          </p>
+          <SocialIconsFooter />
+          <div className="flex flex-wrap justify-center gap-4 text-[11px] text-white/25">
             {[
               ["/impressum", "Impressum"],
               ["/impressum#datenschutz", "Datenschutz"],
