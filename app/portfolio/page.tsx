@@ -30,21 +30,25 @@ const categories = [
 
 export default function PortfolioPage() {
   return (
-    <>
-      <section className="pt-32 pb-16 px-6 lg:px-12 bg-white">
+    <div className="bg-white min-h-screen">
+      <section className="pt-24 sm:pt-28 pb-10 sm:pb-14 px-5 sm:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-xs tracking-[0.4em] uppercase text-gray-400 mb-4">Arbeiten</p>
-          <h1 className="text-4xl md:text-6xl font-light text-black tracking-tight mb-6">Portfolio</h1>
+          <p className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-gray-400 mb-3">Arbeiten</p>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-light text-black tracking-tight mb-4">Portfolio</h1>
           <p className="text-gray-500 text-sm max-w-md mx-auto leading-relaxed">
             Vier Disziplinen. Eine Bildsprache. Entdecken Sie meine Arbeiten.
           </p>
         </div>
       </section>
 
-      <section className="bg-white pb-24 px-6 lg:px-12">
+      <section className="pb-16 sm:pb-24 px-5 sm:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto space-y-1">
           {categories.map((cat, i) => (
-            <Link key={cat.href} href={cat.href} className="group relative flex overflow-hidden bg-black h-64 md:h-80">
+            <Link
+              key={cat.href}
+              href={cat.href}
+              className="group relative flex overflow-hidden bg-black h-56 sm:h-72 md:h-80"
+            >
               <Image
                 src={cat.img}
                 alt={cat.label}
@@ -52,12 +56,14 @@ export default function PortfolioPage() {
                 className="object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 grayscale"
                 unoptimized
               />
-              <div className="relative z-10 flex items-end p-10 w-full">
+              {/* Gradient für Lesbarkeit */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="relative z-10 flex items-end p-6 sm:p-8 lg:p-10 w-full">
                 <div>
-                  <p className="text-xs tracking-widest uppercase text-gray-400 mb-2">0{i + 1}</p>
-                  <h2 className="text-3xl md:text-4xl font-light text-white tracking-tight">{cat.label}</h2>
-                  <p className="text-sm text-gray-300 mt-2">{cat.desc}</p>
-                  <span className="mt-4 inline-block text-xs tracking-widest uppercase text-white/50 group-hover:text-white transition-colors">
+                  <p className="text-[10px] tracking-widest uppercase text-gray-300 mb-1 sm:mb-2">0{i + 1}</p>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white tracking-tight">{cat.label}</h2>
+                  <p className="text-xs sm:text-sm text-gray-300 mt-1 sm:mt-2 hidden sm:block">{cat.desc}</p>
+                  <span className="mt-3 sm:mt-4 inline-block text-[10px] sm:text-xs tracking-widest uppercase text-white/60 group-hover:text-white transition-colors">
                     Ansehen →
                   </span>
                 </div>
@@ -66,6 +72,6 @@ export default function PortfolioPage() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -30,7 +30,7 @@ const videos = [
 export default function VideoPage() {
   return (
     <>
-      <section className="relative pt-40 pb-20 px-6 lg:px-12 bg-black">
+      <section className="relative pt-28 sm:pt-36 pb-16 sm:pb-20 px-5 sm:px-8 lg:px-12 bg-black">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs tracking-[0.4em] uppercase text-gray-500 mb-4">Bewegtbild</p>
           <h1 className="text-5xl md:text-7xl font-light text-white tracking-tight">Video</h1>

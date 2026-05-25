@@ -30,7 +30,7 @@ const sections = [
 export default function RechtlichesPage() {
   return (
     <>
-      <section className="pt-24 sm:pt-32 pb-10 sm:pb-16 px-5 sm:px-8 lg:px-12 bg-white border-b border-gray-100">
+      <section className="pt-24 sm:pt-28 pb-10 sm:pb-14 px-5 sm:px-8 lg:px-12 bg-white border-b border-gray-100">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-gray-400 mb-3 sm:mb-4">Transparenz</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-black tracking-tight mb-4">Rechtliches</h1>
