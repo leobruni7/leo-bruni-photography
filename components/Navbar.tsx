@@ -152,7 +152,7 @@ export default function Navbar() {
             <div ref={undefined} className="relative">
               <button
                 onClick={() => setLangOpen(o => !o)}
-                className={`flex items-center gap-1 text-[11px] px-2.5 py-1.5 rounded-full border transition-all ${
+                className={`flex items-center gap-1 min-h-[36px] text-[11px] px-3 py-2 rounded-full border transition-all ${
                   transparent
                     ? "border-white/20 text-white/70"
                     : "border-[#D4C5A9] text-[#6e6e73]"
@@ -189,7 +189,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setOpen(o => !o)}
-              className={`w-8 h-8 flex flex-col justify-center gap-[5px] ${
+              className={`w-11 h-11 flex flex-col justify-center gap-[5px] ${
                 transparent ? "text-white" : "text-[#1d1d1f]"
               }`}
               aria-label="Menü">

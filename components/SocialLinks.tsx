@@ -92,9 +92,9 @@ export function SocialIconsFooter() {
             rel="noopener noreferrer"
             title={s.label}
             aria-label={s.label}
-            className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#C9A96E] flex items-center justify-center transition-colors duration-200 group"
+            className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#C9A96E] flex items-center justify-center transition-colors duration-200 group"
           >
-            <Icon className="w-[14px] h-[14px] text-white/70 group-hover:text-white transition-colors" />
+            <Icon className="w-[15px] h-[15px] text-white/70 group-hover:text-white transition-colors" />
           </a>
         );
       })}
