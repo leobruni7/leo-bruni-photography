@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { SocialCardsLight } from "@/components/SocialLinks";
 
 export default function KontaktPage() {
   const [form, setForm] = useState({ name: "", email: "", betreff: "", message: "" });
@@ -12,7 +13,7 @@ export default function KontaktPage() {
       {/* Header */}
       <section className="pt-28 sm:pt-36 pb-16 sm:pb-20 px-5 sm:px-8 text-center">
         <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-4">Schreiben Sie mir</p>
-        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extralight text-[#1d1d1f] tracking-tight leading-none">
+        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extralight text-[#1d1d1f] tracking-[-0.04em] leading-none">
           Kontakt
         </h1>
       </section>
@@ -21,9 +22,9 @@ export default function KontaktPage() {
       <section className="pb-24 sm:pb-36 px-5 sm:px-8">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
 
-          {/* Left — Studio info */}
-          <div className="lg:pt-2">
-            <div className="space-y-10">
+          {/* Left — Studio info + Social */}
+          <div>
+            <div className="space-y-8">
 
               <div>
                 <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-4">Studio</p>
@@ -35,23 +36,29 @@ export default function KontaktPage() {
                 </p>
               </div>
 
-              <div className="w-full h-px bg-[#D4C5A9]" />
+              <div className="w-full h-px bg-[#e5e5ea]" />
 
               <div>
                 <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-4">Direkt</p>
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   <a href="mailto:kontakt@leobruni-photo.com"
-                    className="block text-sm text-[#1d1d1f] font-light hover:text-[#C9A96E] transition-colors">
+                    className="flex items-center gap-2 text-sm text-[#1d1d1f] font-light hover:text-[#C9A96E] transition-colors">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4 shrink-0 text-[#D4C5A9]">
+                      <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                     kontakt@leobruni-photo.com
                   </a>
                   <a href="tel:+4915209850658"
-                    className="block text-sm text-[#1d1d1f] font-light hover:text-[#C9A96E] transition-colors">
+                    className="flex items-center gap-2 text-sm text-[#1d1d1f] font-light hover:text-[#C9A96E] transition-colors">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4 shrink-0 text-[#D4C5A9]">
+                      <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                     +49 (0) 152 0985 0658
                   </a>
                 </div>
               </div>
 
-              <div className="w-full h-px bg-[#D4C5A9]" />
+              <div className="w-full h-px bg-[#e5e5ea]" />
 
               <div>
                 <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-4">Verfügbarkeit</p>
@@ -61,21 +68,15 @@ export default function KontaktPage() {
                 </p>
               </div>
 
-              <div className="w-full h-px bg-[#D4C5A9]" />
+              <div className="w-full h-px bg-[#e5e5ea]" />
 
+              {/* Social Media */}
               <div>
-                <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-4">Social</p>
-                <div className="flex gap-6">
-                  <a href="#" className="text-[11px] tracking-[0.3em] uppercase text-[#1d1d1f] font-light hover:text-[#C9A96E] transition-colors border-b border-[#D4C5A9] pb-0.5">
-                    Instagram
-                  </a>
-                  <a href="#" className="text-[11px] tracking-[0.3em] uppercase text-[#1d1d1f] font-light hover:text-[#C9A96E] transition-colors border-b border-[#D4C5A9] pb-0.5">
-                    LinkedIn
-                  </a>
-                </div>
+                <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-4">Social Media</p>
+                <SocialCardsLight only="all" />
               </div>
 
-              <div className="w-full h-px bg-[#D4C5A9]" />
+              <div className="w-full h-px bg-[#e5e5ea]" />
 
               <Link href="/buchen"
                 className="inline-block text-[11px] tracking-[0.3em] uppercase bg-[#1d1d1f] text-white px-10 py-4 rounded-full hover:bg-black transition-colors">
@@ -86,7 +87,7 @@ export default function KontaktPage() {
 
           {/* Right — Formular */}
           {sent ? (
-            <div className="flex items-center justify-center py-20">
+            <div className="flex items-start pt-10 justify-center">
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full border border-[#C9A96E] flex items-center justify-center mx-auto mb-6">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -94,7 +95,7 @@ export default function KontaktPage() {
                   </svg>
                 </div>
                 <p className="text-[10px] tracking-[0.4em] uppercase text-[#C9A96E] mb-4">Gesendet</p>
-                <h3 className="text-2xl font-extralight text-[#1d1d1f] mb-3 tracking-tight">Vielen Dank!</h3>
+                <h3 className="text-2xl font-extralight text-[#1d1d1f] mb-3 tracking-[-0.03em]">Vielen Dank!</h3>
                 <p className="text-sm text-[#6e6e73] font-light leading-relaxed">
                   Ich antworte innerhalb von 24 Stunden.
                 </p>
@@ -102,7 +103,9 @@ export default function KontaktPage() {
             </div>
           ) : (
             <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="space-y-5">
-              <h2 className="text-2xl sm:text-3xl font-extralight text-[#1d1d1f] tracking-tight mb-8">Nachricht senden</h2>
+              <h2 className="text-2xl sm:text-3xl font-extralight text-[#1d1d1f] tracking-[-0.03em] mb-8">
+                Nachricht senden
+              </h2>
 
               {[
                 { label: "Name *", key: "name", type: "text", placeholder: "Ihr vollständiger Name", required: true },
@@ -142,10 +145,8 @@ export default function KontaktPage() {
               </button>
 
               <p className="text-[11px] text-[#6e6e73] text-center leading-relaxed pt-1">
-                Oder direkt buchen unter{" "}
-                <Link href="/buchen" className="text-[#C9A96E] hover:underline">
-                  /buchen
-                </Link>
+                Oder direkt buchen:{" "}
+                <Link href="/buchen" className="text-[#C9A96E] hover:underline">/buchen →</Link>
               </p>
             </form>
           )}
