@@ -57,6 +57,7 @@ export default function Footer() {
                 ["/anfrage", "Anfragen"],
                 ["/buchen", "Termin buchen"],
                 ["/kontakt", "Kontakt"],
+                ["/newsletter", "Newsletter"],
                 ["/faq", "FAQ"],
               ].map(([href, label]) => (
                 <Link key={href} href={href}

@@ -26,6 +26,7 @@ const mobileLinks = [
   { href: "/kontakt", label: "Kontakt" },
   { href: "/anfrage", label: "Anfragen" },
   { href: "/buchen", label: "Termin buchen" },
+  { href: "/newsletter", label: "Newsletter" },
   { href: "/faq", label: "FAQ" },
   { href: "/rechtliches", label: "Rechtliches" },
 ];

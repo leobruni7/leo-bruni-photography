@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { SocialCardsLight } from "@/components/SocialLinks";
 
 export default function KontaktPage() {
   const [form, setForm] = useState({ name: "", email: "", betreff: "", message: "" });
@@ -83,13 +82,6 @@ export default function KontaktPage() {
                   Mo – Fr: 09:00 – 18:00 Uhr<br />
                   Wochenende: nach Vereinbarung
                 </p>
-              </div>
-
-              <div className="w-full h-px bg-[#e5e5ea]" />
-
-              <div>
-                <p className="text-[10px] tracking-[0.5em] uppercase text-[#C9A96E] mb-4">Social Media</p>
-                <SocialCardsLight only="all" />
               </div>
 
               <div className="w-full h-px bg-[#e5e5ea]" />
