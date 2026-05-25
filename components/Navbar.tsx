@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
+  { href: "/ueber-mich", label: "Über mich" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/portfolio/food", label: "Food" },
   { href: "/portfolio/hochzeit", label: "Hochzeit" },
@@ -45,22 +46,40 @@ export default function Navbar() {
           Leo Bruni
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-          {navLinks.map((link) => (
+        {/* Desktop — nur die wichtigsten Links */}
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
+          {[
+            { href: "/ueber-mich", label: "Über mich" },
+            { href: "/portfolio", label: "Portfolio" },
+            { href: "/portfolio/food", label: "Food" },
+            { href: "/portfolio/hochzeit", label: "Hochzeit" },
+            { href: "/portfolio/architektur", label: "Architektur" },
+            { href: "/portfolio/video", label: "Video" },
+            { href: "/kontakt", label: "Kontakt" },
+          ].map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-xs tracking-widest uppercase transition-colors duration-300 hover:opacity-50 ${
+              className={`text-[11px] tracking-widest uppercase transition-colors duration-300 hover:opacity-50 ${
                 scrolled ? "text-black" : "text-white"
               } ${pathname === link.href ? "border-b border-current pb-0.5" : ""}`}
             >
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/buchen"
+            className={`text-[11px] tracking-widest uppercase px-4 py-2 transition-all duration-300 ${
+              scrolled
+                ? "bg-black text-white hover:bg-gray-800"
+                : "border border-white text-white hover:bg-white hover:text-black"
+            }`}
+          >
+            Buchen
+          </Link>
         </nav>
 
-        {/* Mobile/Tablet Button */}
+        {/* Mobile/Tablet */}
         <button
           className={`lg:hidden p-2 transition-colors duration-300 ${
             scrolled || open ? "text-black" : "text-white"
@@ -74,25 +93,21 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden bg-white border-t border-gray-100 px-5 sm:px-8 pb-8 pt-6 flex flex-col gap-6">
+        <div className="lg:hidden bg-white border-t border-gray-100 px-5 sm:px-8 pb-8 pt-6 flex flex-col gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={`text-sm tracking-widest uppercase transition-colors ${
-                pathname === link.href ? "text-black font-medium" : "text-gray-500 hover:text-black"
+                pathname === link.href ? "text-black font-medium" : "text-gray-400 hover:text-black"
               }`}
             >
               {link.label}
             </Link>
           ))}
-          <div className="pt-4 border-t border-gray-100">
-            <Link
-              href="/buchen"
-              className="block w-full text-center bg-black text-white text-xs tracking-widest uppercase py-4"
-            >
-              Jetzt buchen
-            </Link>
+          <div className="pt-4 border-t border-gray-100 space-y-2">
+            <Link href="/faq" className="block text-xs tracking-widest uppercase text-gray-400 hover:text-black transition-colors">FAQ</Link>
+            <Link href="/rechtliches" className="block text-xs tracking-widest uppercase text-gray-400 hover:text-black transition-colors">Rechtliches</Link>
           </div>
         </div>
       )}
