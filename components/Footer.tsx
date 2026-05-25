@@ -57,11 +57,11 @@ export default function Footer() {
           <div>
             <p className="text-[10px] tracking-widest uppercase text-gray-400 mb-3 sm:mb-4">Kontakt</p>
             <div className="flex flex-col gap-2 text-sm text-gray-300">
-              <a href="mailto:hello@leobruni-photo.com" className="hover:text-white transition-colors break-all">
-                hello@leobruni-photo.com
+              <a href="mailto:kontakt@leobruni-photo.com" className="hover:text-white transition-colors break-all">
+                kontakt@leobruni-photo.com
               </a>
-              <a href="tel:+4940123456789" className="hover:text-white transition-colors">
-                +49 40 123 456 789
+              <a href="tel:+4915209850658" className="hover:text-white transition-colors">
+                +49 (0) 152 0985 0658
               </a>
               <div className="flex gap-5 mt-3">
                 <a href="#" className="text-[10px] tracking-widest uppercase hover:text-white transition-colors">Instagram</a>

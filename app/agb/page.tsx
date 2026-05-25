@@ -65,7 +65,7 @@ export default function AGBPage() {
         <div className="border-t border-gray-100 pt-8 mt-12">
           <p className="text-xs text-gray-400 leading-relaxed">
             Leo Bruni Photography · Rüsternkamp 17 · 22607 Hamburg · Deutschland<br />
-            E-Mail: hello@leobruni-photo.com · Tel: +49 40 123 456 789
+            E-Mail: kontakt@leobruni-photo.com · Mobil: +49 (0) 152 0985 0658
           </p>
         </div>
       </div>

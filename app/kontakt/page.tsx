@@ -34,11 +34,11 @@ export default function KontaktPage() {
             <div>
               <p className="text-xs tracking-[0.4em] uppercase text-gray-400 mb-4">Direkt</p>
               <div className="space-y-2">
-                <a href="mailto:hello@leobruni.photo" className="block text-sm text-black hover:text-gray-500 transition-colors">
-                  hello@leobruni.photo
+                <a href="mailto:kontakt@leobruni-photo.com" className="block text-sm text-black hover:text-gray-500 transition-colors">
+                  kontakt@leobruni-photo.com
                 </a>
-                <a href="tel:+43123456789" className="block text-sm text-black hover:text-gray-500 transition-colors">
-                  +43 123 456 789
+                <a href="tel:+4915209850658" className="block text-sm text-black hover:text-gray-500 transition-colors">
+                  +49 (0) 152 0985 0658
                 </a>
               </div>
             </div>

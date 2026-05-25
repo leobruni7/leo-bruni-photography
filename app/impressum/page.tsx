@@ -21,10 +21,10 @@ export default function ImpressumPage() {
         <section className="mb-10">
           <h2 className="text-[10px] tracking-[0.3em] uppercase text-gray-400 mb-3 sm:mb-4">Kontakt</h2>
           <p className="text-sm text-gray-600 leading-relaxed">
-            Telefon: +49 40 123 456 789<br />
+            Mobil: +49 (0) 152 0985 0658<br />
             E-Mail:{" "}
-            <a href="mailto:hello@leobruni-photo.com" className="text-black hover:text-gray-500 transition-colors">
-              hello@leobruni-photo.com
+            <a href="mailto:kontakt@leobruni-photo.com" className="text-black hover:text-gray-500 transition-colors">
+              kontakt@leobruni-photo.com
             </a>
           </p>
         </section>
@@ -72,7 +72,7 @@ export default function ImpressumPage() {
             {[
               {
                 titel: "1. Verantwortlicher",
-                text: "Leo Bruni Photography, Leo Bruni, Rüsternkamp 17, 22607 Hamburg, Deutschland. E-Mail: hello@leobruni-photo.com",
+                text: "Leo Bruni Photography, Leo Bruni, Rüsternkamp 17, 22607 Hamburg, Deutschland. E-Mail: kontakt@leobruni-photo.com",
               },
               {
                 titel: "2. Erhebung und Verarbeitung personenbezogener Daten",
@@ -80,7 +80,7 @@ export default function ImpressumPage() {
               },
               {
                 titel: "3. Ihre Rechte (DSGVO Art. 15–22)",
-                text: "Sie haben das Recht auf: Auskunft über gespeicherte Daten · Berichtigung unrichtiger Daten · Löschung · Einschränkung der Verarbeitung · Datenübertragbarkeit · Widerspruch gegen die Verarbeitung. Kontakt: hello@leobruni-photo.com",
+                text: "Sie haben das Recht auf: Auskunft über gespeicherte Daten · Berichtigung unrichtiger Daten · Löschung · Einschränkung der Verarbeitung · Datenübertragbarkeit · Widerspruch gegen die Verarbeitung. Kontakt: kontakt@leobruni-photo.com",
               },
               {
                 titel: "4. Cookies",
