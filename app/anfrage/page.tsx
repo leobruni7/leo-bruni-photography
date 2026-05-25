@@ -149,7 +149,7 @@ export default function AnfragePage() {
                     required type="text"
                     value={form.name}
                     onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                    className="w-full border border-[#D4C5A9] rounded-xl px-4 py-3.5 text-sm text-[#1d1d1f] placeholder-[#D4C5A9] focus:outline-none focus:border-[#C9A96E] transition-colors"
+                    className="w-full border border-[#D4C5A9] rounded-xl px-4 py-3.5 text-sm text-[#1d1d1f] placeholder-[#D4C5A9] focus:outline-none focus:border-[#C9A96E] transition-colors bg-white"
                     placeholder="Ihr Name"
                   />
                 </div>
@@ -159,7 +159,7 @@ export default function AnfragePage() {
                     required type="email"
                     value={form.email}
                     onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-                    className="w-full border border-[#D4C5A9] rounded-xl px-4 py-3.5 text-sm text-[#1d1d1f] placeholder-[#D4C5A9] focus:outline-none focus:border-[#C9A96E] transition-colors"
+                    className="w-full border border-[#D4C5A9] rounded-xl px-4 py-3.5 text-sm text-[#1d1d1f] placeholder-[#D4C5A9] focus:outline-none focus:border-[#C9A96E] transition-colors bg-white"
                     placeholder="ihre@email.com"
                   />
                 </div>
@@ -182,7 +182,7 @@ export default function AnfragePage() {
                   required rows={5}
                   value={form.message}
                   onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                  className="w-full border border-[#D4C5A9] rounded-xl px-4 py-3.5 text-sm text-[#1d1d1f] placeholder-[#D4C5A9] focus:outline-none focus:border-[#C9A96E] transition-colors resize-none"
+                  className="w-full border border-[#D4C5A9] rounded-xl px-4 py-3.5 text-sm text-[#1d1d1f] placeholder-[#D4C5A9] focus:outline-none focus:border-[#C9A96E] transition-colors resize-none bg-white"
                   placeholder="Beschreiben Sie Ihr Projekt, Ihren Wunschtermin und Ihr Budget…"
                 />
               </div>
@@ -196,7 +196,7 @@ export default function AnfragePage() {
 
               <button
                 type="submit"
-                className="w-full bg-[#1d1d1f] text-white text-[11px] tracking-[0.3em] uppercase py-4 rounded-full hover:bg-black transition-colors font-medium"
+                className="w-full min-h-[44px] bg-[#1d1d1f] text-white text-[11px] tracking-[0.3em] uppercase py-4 rounded-full hover:bg-black transition-colors font-medium active:scale-[0.98]"
               >
                 Anfrage kostenfrei senden
               </button>

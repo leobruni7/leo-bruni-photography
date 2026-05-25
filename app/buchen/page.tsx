@@ -153,7 +153,7 @@ export default function BuchenPage() {
               <button
                 disabled={!category}
                 onClick={() => setStep(2)}
-                className="mt-8 w-full bg-[#1d1d1f] text-white text-[11px] tracking-[0.3em] uppercase py-4 rounded-full hover:bg-black transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                className="mt-8 w-full min-h-[44px] bg-[#1d1d1f] text-white text-[11px] tracking-[0.3em] uppercase py-4 rounded-full hover:bg-black transition-colors disabled:opacity-30 disabled:cursor-not-allowed active:scale-[0.98]"
               >
                 Weiter
               </button>
@@ -168,9 +168,9 @@ export default function BuchenPage() {
               {/* Kalender */}
               <div className="border border-[#D4C5A9] rounded-2xl p-5 sm:p-6 mb-5 bg-[#FAF7F2]">
                 <div className="flex items-center justify-between mb-6">
-                  <button onClick={prevMonth} className="w-8 h-8 flex items-center justify-center text-[#6e6e73] hover:text-[#1d1d1f] transition-colors rounded-full hover:bg-white">‹</button>
+                  <button onClick={prevMonth} className="w-11 h-11 flex items-center justify-center text-[#6e6e73] hover:text-[#1d1d1f] transition-colors rounded-full hover:bg-white active:scale-[0.95]">‹</button>
                   <span className="text-xs tracking-[0.3em] uppercase font-medium text-[#1d1d1f]">{MONTHS[month]} {year}</span>
-                  <button onClick={nextMonth} className="w-8 h-8 flex items-center justify-center text-[#6e6e73] hover:text-[#1d1d1f] transition-colors rounded-full hover:bg-white">›</button>
+                  <button onClick={nextMonth} className="w-11 h-11 flex items-center justify-center text-[#6e6e73] hover:text-[#1d1d1f] transition-colors rounded-full hover:bg-white active:scale-[0.95]">›</button>
                 </div>
                 <div className="grid grid-cols-7 mb-2">
                   {DAYS.map(d => (
@@ -225,13 +225,13 @@ export default function BuchenPage() {
               )}
 
               <div className="flex gap-3 mt-8">
-                <button onClick={() => setStep(1)} className="flex-1 border border-[#D4C5A9] text-[#1d1d1f] text-[10px] tracking-[0.3em] uppercase py-4 rounded-full hover:border-[#C9A96E] transition-colors">
+                <button onClick={() => setStep(1)} className="flex-1 min-h-[44px] border border-[#D4C5A9] text-[#1d1d1f] text-[10px] tracking-[0.3em] uppercase py-4 rounded-full hover:border-[#C9A96E] transition-colors active:scale-[0.98]">
                   Zurück
                 </button>
                 <button
                   disabled={!selectedDate || !selectedTime}
                   onClick={() => setStep(3)}
-                  className="flex-1 bg-[#1d1d1f] text-white text-[10px] tracking-[0.3em] uppercase py-4 rounded-full hover:bg-black transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                  className="flex-1 min-h-[44px] bg-[#1d1d1f] text-white text-[10px] tracking-[0.3em] uppercase py-4 rounded-full hover:bg-black transition-colors disabled:opacity-30 disabled:cursor-not-allowed active:scale-[0.98]"
                 >
                   Weiter
                 </button>
@@ -283,10 +283,10 @@ export default function BuchenPage() {
               </div>
 
               <div className="flex gap-3 mt-8">
-                <button type="button" onClick={() => setStep(2)} className="flex-1 border border-[#D4C5A9] text-[#1d1d1f] text-[10px] tracking-[0.3em] uppercase py-4 rounded-full hover:border-[#C9A96E] transition-colors">
+                <button type="button" onClick={() => setStep(2)} className="flex-1 min-h-[44px] border border-[#D4C5A9] text-[#1d1d1f] text-[10px] tracking-[0.3em] uppercase py-4 rounded-full hover:border-[#C9A96E] transition-colors active:scale-[0.98]">
                   Zurück
                 </button>
-                <button type="submit" className="flex-1 bg-[#1d1d1f] text-white text-[10px] tracking-[0.3em] uppercase py-4 rounded-full hover:bg-black transition-colors">
+                <button type="submit" className="flex-1 min-h-[44px] bg-[#1d1d1f] text-white text-[10px] tracking-[0.3em] uppercase py-4 rounded-full hover:bg-black transition-colors active:scale-[0.98]">
                   Anfrage senden
                 </button>
               </div>

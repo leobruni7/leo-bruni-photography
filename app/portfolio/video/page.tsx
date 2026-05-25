@@ -33,7 +33,7 @@ export default function VideoPage() {
     <div className="bg-white min-h-screen">
 
       {/* Hero — vollbild wie andere Kategorien */}
-      <section className="relative h-screen min-h-[580px] bg-black flex items-end overflow-hidden">
+      <section className="relative h-dvh min-h-[580px] bg-black flex items-end overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=2000&q=90"
           alt="Video & Film"

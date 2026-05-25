@@ -11,7 +11,7 @@ export default function KontaktPage() {
     <div className="bg-white min-h-screen">
 
       {/* Hero — weiches, einladendes Bild */}
-      <section className="relative h-[60vh] sm:h-[70vh] min-h-[480px] bg-black flex items-end overflow-hidden">
+      <section className="relative h-[60svh] sm:h-[65svh] min-h-[420px] bg-black flex items-end overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=2000&q=85"
           alt="Kontakt Leo Bruni Photography"

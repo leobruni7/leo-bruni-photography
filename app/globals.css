@@ -1,14 +1,20 @@
 @import "tailwindcss";
 
-* {
+/* ── Reset ──────────────────────────────────────────────────────────── */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ── Root ────────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  -webkit-text-size-adjust: 100%;      /* iOS font-size adjust */
+  text-size-adjust: 100%;
+  color-scheme: light;                  /* prevent forced dark mode */
+  tab-size: 4;
 }
 
 body {
@@ -18,10 +24,16 @@ body {
   font-feature-settings: "cv01", "cv02", "cv03", "cv04";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  overscroll-behavior-y: none;          /* prevent pull-to-refresh on body */
   letter-spacing: -0.01em;
+  /* Safe area for iPhone notch/home bar */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
+/* ── Typography ──────────────────────────────────────────────────────── */
 h1, h2, h3, h4 {
   letter-spacing: -0.03em;
   font-weight: 200;
@@ -33,13 +45,75 @@ p, li, span {
   line-height: 1.6;
 }
 
+/* ── Touch & Interaction ─────────────────────────────────────────────── */
+a, button, [role="button"], input[type="submit"], input[type="button"] {
+  -webkit-tap-highlight-color: transparent;  /* remove tap flash on iOS */
+  touch-action: manipulation;                /* remove 300ms tap delay */
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ── Forms — prevent iOS zoom (font-size must be ≥ 16px) ─────────────── */
+input, textarea, select {
+  font-size: 16px;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;                     /* iOS rounds inputs by default */
+}
+
+/* ── Images ──────────────────────────────────────────────────────────── */
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Selection ───────────────────────────────────────────────────────── */
 ::selection {
   background: #1d1d1f;
   color: #fff;
 }
 
+/* ── Scrollbar (WebKit) ──────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #d2d2d7; border-radius: 2px; }
 
-img { display: block; max-width: 100%; }
+/* ── Focus — keyboard accessible, not mouse-visible ──────────────────── */
+:focus-visible {
+  outline: 2px solid #C9A96E;
+  outline-offset: 2px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Backdrop-blur fallback ──────────────────────────────────────────── */
+@supports not (backdrop-filter: blur(1px)) {
+  .backdrop-blur-xl {
+    background-color: rgba(255, 255, 255, 0.97) !important;
+  }
+}
+
+/* ── Utility: full dynamic viewport height (mobile browsers) ─────────── */
+.h-dvh {
+  height: 100vh;          /* fallback */
+  height: 100dvh;         /* iOS Safari 15.4+, Chrome 108+, Firefox 101+ */
+}
+.min-h-dvh {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* ── Performance hints for animated elements ─────────────────────────── */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* ── Smooth momentum scroll on iOS ──────────────────────────────────── */
+.overflow-y-auto, .overflow-y-scroll {
+  -webkit-overflow-scrolling: touch;
+}

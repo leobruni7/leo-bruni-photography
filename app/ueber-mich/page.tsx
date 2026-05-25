@@ -12,7 +12,7 @@ export default function UeberMichPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[60vh] sm:h-[70vh] min-h-[400px] flex items-end overflow-hidden bg-black">
+      <section className="relative h-[60svh] sm:h-[70svh] min-h-[400px] flex items-end overflow-hidden bg-black">
         <Image
           src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1800&q=90"
           alt="Leo Bruni Photography Studio"
@@ -48,7 +48,7 @@ export default function UeberMichPage() {
             </div>
             <Link
               href="/buchen"
-              className="inline-block mt-8 sm:mt-10 bg-black text-white text-[10px] sm:text-xs tracking-[0.3em] uppercase px-10 py-4 hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center justify-center min-h-[44px] mt-8 sm:mt-10 bg-[#1d1d1f] text-white text-[10px] tracking-[0.3em] uppercase px-10 py-4 rounded-full hover:bg-black transition-colors active:scale-[0.98]"
             >
               Zusammenarbeiten
             </Link>
@@ -124,10 +124,10 @@ export default function UeberMichPage() {
           <p className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-gray-400 mb-3">Kontakt</p>
           <h2 className="text-2xl sm:text-3xl font-light text-black mb-5 sm:mb-6 tracking-tight">Lassen Sie uns sprechen</h2>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Link href="/buchen" className="bg-black text-white text-[10px] sm:text-xs tracking-[0.3em] uppercase px-8 py-4 hover:bg-gray-800 transition-colors">
+            <Link href="/buchen" className="inline-flex items-center justify-center min-h-[44px] bg-[#1d1d1f] text-white text-[10px] tracking-[0.3em] uppercase px-8 py-4 rounded-full hover:bg-black transition-colors active:scale-[0.98]">
               Termin buchen
             </Link>
-            <Link href="/kontakt" className="border border-black text-black text-[10px] sm:text-xs tracking-[0.3em] uppercase px-8 py-4 hover:bg-black hover:text-white transition-colors">
+            <Link href="/kontakt" className="inline-flex items-center justify-center min-h-[44px] border border-[#1d1d1f] text-[#1d1d1f] text-[10px] tracking-[0.3em] uppercase px-8 py-4 rounded-full hover:bg-[#1d1d1f] hover:text-white transition-colors active:scale-[0.98]">
               Nachricht senden
             </Link>
           </div>
