@@ -7,7 +7,6 @@ export type SocialPlatform = {
   priority: "primary" | "secondary";
 };
 
-// ── Tragen Sie hier Ihre echten URLs ein ──────────────────────────────────
 export const SOCIAL: SocialPlatform[] = [
   {
     id: "instagram",
@@ -20,7 +19,7 @@ export const SOCIAL: SocialPlatform[] = [
   {
     id: "youtube",
     label: "YouTube",
-    handle: "Leo Bruni Photography",
+    handle: "@leobruniphoto",
     href: "https://www.youtube.com/@leobruniphoto",
     desc: "Full-Length Films & Tutorials",
     priority: "primary",
@@ -36,15 +35,15 @@ export const SOCIAL: SocialPlatform[] = [
   {
     id: "facebook",
     label: "Facebook",
-    handle: "Leo Bruni Photography",
-    href: "https://www.facebook.com/leobruniphotography",
+    handle: "leobruniphoto",
+    href: "https://www.facebook.com/leobruniphoto",
     desc: "Events & Neuigkeiten",
     priority: "secondary",
   },
   {
     id: "pinterest",
     label: "Pinterest",
-    handle: "leobruni.photo",
+    handle: "leobruniphoto",
     href: "https://www.pinterest.com/leobruniphoto",
     desc: "Moodboards für Food & Hochzeit",
     priority: "secondary",
@@ -52,7 +51,7 @@ export const SOCIAL: SocialPlatform[] = [
   {
     id: "linkedin",
     label: "LinkedIn",
-    handle: "Leo Bruni",
+    handle: "in/leobruni",
     href: "https://www.linkedin.com/in/leobruni",
     desc: "Business & Architektur-Projekte",
     priority: "secondary",
@@ -60,8 +59,8 @@ export const SOCIAL: SocialPlatform[] = [
   {
     id: "vimeo",
     label: "Vimeo",
-    handle: "Leo Bruni",
-    href: "https://vimeo.com/leobruni",
+    handle: "leobruniphoto",
+    href: "https://vimeo.com/leobruniphoto",
     desc: "Professionelles Video-Portfolio",
     priority: "secondary",
   },
